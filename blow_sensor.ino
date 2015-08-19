@@ -1,4 +1,5 @@
 int val;
+int threshold = 300;
 void setup()
 {
         Keyboard.begin();
@@ -10,7 +11,7 @@ void loop()
 	delay(10);
 	val = analogRead(0);
 	delay(10);
-        if(val > 300) {
+        if(val > threshold) {
           Keyboard.write(KEY_RETURN);
           delay(1000);
         }
